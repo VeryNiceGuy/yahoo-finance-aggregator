@@ -1,0 +1,30 @@
+﻿<Window x:Class="Aggregator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aggregator"
+        mc:Ignorable="d"
+        Title="Aggregator" Height="398" Width="339" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="286*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="94,301,0,0" VerticalAlignment="Top" Height="24" Width="80" Click="Save_Button_Click" Grid.Column="1"/>
+        <TextBox x:Name="SymbolTextBox" HorizontalAlignment="Left" Margin="54,49,0,0" Text="GOOG" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" Grid.Column="1"/>
+        <DatePicker x:Name="FromDatePicker" HorizontalAlignment="Left" Margin="54,115,0,0" VerticalAlignment="Top" Width="120" DisplayDate="2021-10-14" FirstDayOfWeek="Monday" Grid.Column="1"/>
+        <DatePicker x:Name="ToDatePicker" HorizontalAlignment="Left" Margin="54,0,0,0" VerticalAlignment="Center" Width="120" FirstDayOfWeek="Monday" DisplayDate="2021-10-14" Grid.Column="1"/>
+        <Label Content="SYMBOL:" HorizontalAlignment="Left" Margin="51,48,0,0" VerticalAlignment="Top" Width="59" Grid.ColumnSpan="2"/>
+        <Label Content="FROM:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label Content="TO:" HorizontalAlignment="Left" Margin="27,176,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <ComboBox x:Name="PeriodComboBox" HorizontalAlignment="Left" Margin="54,241,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
+            <ComboBoxItem Content="Day" IsSelected="True"></ComboBoxItem>
+            <ComboBoxItem Content="Week"></ComboBoxItem>
+            <ComboBoxItem Content="Month"></ComboBoxItem>
+            <ComboBoxItem Content="Year"></ComboBoxItem>
+        </ComboBox>
+        <Label Content="PERIOD:" HorizontalAlignment="Left" Margin="1,237,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+    </Grid>
+</Window>
